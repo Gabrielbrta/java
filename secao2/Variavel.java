@@ -24,7 +24,7 @@ public class Variavel {
         // 3 - Comentários
 
         /*
-         comentário em blocoasdasd
+         comentário em bloco
          asdasd
          asdasd
          adsad
@@ -94,5 +94,12 @@ public class Variavel {
         final int DIAS_DA_SEMANA  = 7;
 
         System.out.println("Dias da semana: " + DIAS_DA_SEMANA);
+
+
+        //Inferência de tipo
+        //Atribui de forma dinâmica o tipo da variável e não pode ser alterado
+        
+        var n1 = 10;
+        System.out.println(n1);
     }
 }
