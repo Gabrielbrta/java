@@ -24,7 +24,7 @@ public class Variavel {
         // 3 - Comentários
 
         /*
-         comentário em bloco
+         comentário em blocoasdasd
          asdasd
          asdasd
          adsad
