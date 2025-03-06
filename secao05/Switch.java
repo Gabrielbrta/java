@@ -17,7 +17,6 @@ public class Switch {
                 break;
             default:
                 System.out.println("Não existe");
-                break;
         }
     }
 }
