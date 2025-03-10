@@ -38,6 +38,7 @@ public class ClassificarProduto {
                 
                 System.out.println("O produto " + userProduct + " está classificado como " + preco1 + " " + classificacao);
             }
+            
         } else {
             System.out.println("O produto não está no catalogo!");
         }
