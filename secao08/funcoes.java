@@ -48,7 +48,7 @@ public class funcoes {
         return opcao;
     }
 
-    // calculadora
+    // Operações
 
     public static double[] getNumbers() {
         Scanner scanner = new Scanner(System.in);
