@@ -18,15 +18,21 @@ public class funcoes {
                 case 2: 
                     divisao();
                     break;
+                case 3: 
+                    subtracao();
+                    break;
+                case 4: 
+                    multiplicação();
+                    break;
                 default:
-                    System.out.println("opção não existente");
+                    System.out.println("programa finalizado");
                     calculadora = false;
             }
         }
-
         scanner.close();
     }
 
+    // navegação
     public static int opcao() {
         Scanner scanner = new Scanner(System.in);
         
@@ -35,39 +41,56 @@ public class funcoes {
         System.out.println("2 - Divisão");
         System.out.println("3 - Subtração");
         System.out.println("4 - Multiplicação");
+        System.out.println("5 - Sair");
 
         int opcao = scanner.nextInt();
 
         return opcao;
     }
 
-    // public static boolean continuar() {
+    // calculadora
 
-    // }
-
-    public static double soma() {
+    public static double[] getNumbers() {
         Scanner scanner = new Scanner(System.in);
 
+        double[] numbers = new double[2];
         System.out.println("Digite o primeiro número");
-        double n1 = scanner.nextDouble();
+        numbers[0] = scanner.nextDouble();
         System.out.println("Digite o segundo número");
-        double n2 = scanner.nextDouble();
-        double resultado = n1 + n2;
-        System.out.println("A soma dos números " + n1 + " + " + n2 + " é " + resultado);
+        numbers[1] = scanner.nextDouble();
+
+        return numbers;
+    }
+
+    public static double soma() {
+        System.out.println("Somar");
+        double[] numbers = getNumbers();
+        double resultado = numbers[0] + numbers[1];
+        System.out.println("A soma dos números " + numbers[0] + " + " + numbers[1] + " é " + resultado);
         return resultado;
     }
 
     public static double divisao() {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Digite o primeiro número");
-        double n1 = scanner.nextDouble();
-        System.out.println("Digite o segundo número");
-        double n2 = scanner.nextDouble();
-        double resultado = n1 / n2;
-        System.out.println("A divisão dos números " + n1 + " + " + n2 + " é " + resultado);
+        System.out.println("Dividir");
+        double[] numbers = getNumbers();
+        double resultado = numbers[0] / numbers[1];
+        System.out.println("A divisão dos números " + numbers[0] + " + " + numbers[1] + " é " + resultado);
         return resultado;
     }
 
+    public static double subtracao() {
+        System.out.println("Subtrair");
+        double[] numbers = getNumbers();
+        double resultado = numbers[0] - numbers[1];
+        System.out.println("A subtração dos números " + numbers[0] + " + " + numbers[1] + " é " + resultado);
+        return resultado;
+    }
 
+    public static double multiplicação() {
+        System.out.println("Multiplicar");
+        double[] numbers = getNumbers();
+        double resultado = numbers[0] * numbers[1];
+        System.out.println("A Multiplicação dos números " + numbers[0] + " + " + numbers[1] + " é " + resultado);
+        return resultado;
+    }
 }
